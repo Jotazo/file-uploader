@@ -4,7 +4,8 @@
   "description": "",
   "main": "./src/app.ts",
   "scripts": {
-    "start": "tsc && NODE_ENV=production node ./build/app.js",
+    "build": "tsc",
+    "start": "npm run build && NODE_ENV=production node ./build/app.js",
     "dev": "NODE_ENV=development nodemon",
     "lint:fix": "eslint --fix *.ts"
   },
