@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Medium.ttf);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-1: rgba(47, 128, 237, 1);
+  --gray-2: rgba(79, 79, 79, 1);
+  --gray-3: rgba(130, 130, 130, 1);
+  --gray-4: rgba(189, 189, 189, 1);
+  --gray-5: rgba(224, 224, 224, 1);
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+}
+
+* {
+  font-family: Poppins;
+}
+
