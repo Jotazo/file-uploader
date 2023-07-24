@@ -22,7 +22,7 @@ const Uploaded: React.FC<Props> = ({ fileUrl, copyTextToClipboard }) => {
           type="text"
           value={fileUrl}
           disabled
-          className="flex-1 inputLink"
+          className="flex-1 input-link"
         />
         <button
           onClick={() => void copyTextToClipboard(fileUrl)}

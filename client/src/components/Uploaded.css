@@ -8,41 +8,12 @@
   letter-spacing: -0.63px;
 }
 
-.subTitle {
-  color: var(--gray-3, #828282);
-  text-align: center;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.35px;
-}
-
 .section {
   width: 338px;
   height: 218.903px;
 }
 
-.section__subtitle {
-  color: var(--gray-4, #bdbdbd);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.42px;
-}
-
-.footer__text {
-  color: var(--gray-4, #bdbdbd);
-  text-align: center;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.42px;
-}
-
-.inputLink {
+.input-link {
   color: var(--gray-2, #4f4f4f);
   text-align: center;
   font-size: 10px;

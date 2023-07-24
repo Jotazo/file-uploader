@@ -19,7 +19,7 @@ const Upload: React.FC<Props> = ({ handleDroppedFile, handleChangeFile }) => {
     <>
       <header className="flex flex-col gap-4">
         <h2 className="title">Upload your image</h2>
-        <p className="subTitle">File should be Jpeg, Png...</p>
+        <p className="sub-title">File should be Jpeg, Png...</p>
       </header>
       <section
         draggable={true}
@@ -30,10 +30,10 @@ const Upload: React.FC<Props> = ({ handleDroppedFile, handleChangeFile }) => {
         className="section"
       >
         <img className="w-[35%]" src={inputImage} />
-        <p className="section__subtitle">Drag & Drop your image here</p>
+        <p className="section-subtitle">Drag & Drop your image here</p>
       </section>
       <footer className="flex flex-col items-center gap-6">
-        <p className="footer__text">Or</p>
+        <p className="footer-text">Or</p>
         <input
           type="file"
           className="hidden"

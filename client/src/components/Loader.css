@@ -12,7 +12,7 @@
   width: 340px;
   height: var(--height-of-loader);
   border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(0 0 0 / 20%);
   position: relative;
 }
 

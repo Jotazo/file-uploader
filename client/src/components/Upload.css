@@ -8,7 +8,7 @@
   letter-spacing: -0.63px;
 }
 
-.subTitle {
+.sub-title {
   color: var(--gray-3, #828282);
   text-align: center;
   font-size: 10px;
@@ -31,7 +31,7 @@
   height: 218.903px;
 }
 
-.section__subtitle {
+.section-subtitle {
   color: var(--gray-4, #bdbdbd);
   font-size: 12px;
   font-style: normal;
@@ -40,7 +40,7 @@
   letter-spacing: -0.42px;
 }
 
-.footer__text {
+.footer-text {
   color: var(--gray-4, #bdbdbd);
   text-align: center;
   font-size: 12px;
