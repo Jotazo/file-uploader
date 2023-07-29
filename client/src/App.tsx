@@ -1,36 +1,34 @@
-import { Alert, Snackbar } from "@mui/material";
+import { useState } from "react";
+import { useSnackbar } from "notistack";
 
-import { useFileUrl, useCopyToClipboard } from "./hooks";
+import { uploadFile } from "./services/upload";
+
+import { getSnackbarOptionsVariant } from "./utils/getSnackbarOptions";
 
 import { Layout, Loader, Upload, Uploaded } from "./components";
 
-function App() {
-  const {
-    fileUrl,
-    isUploading,
-    error,
-    handleChangeFile,
-    handleDroppedFile,
-    onNavBack,
-    resetErrorMsg,
-  } = useFileUrl();
+const App = () => {
+  const { enqueueSnackbar } = useSnackbar();
 
-  const { isCopied, copyTextToClipboard, resetCopyToClipboard } =
-    useCopyToClipboard();
+  const [fileUrl, setFileUrl] = useState<string | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
 
-  const isSnackBarOpened = Boolean(error) || isCopied;
-  const handleSnackbarClose = error
-    ? resetErrorMsg
-    : isCopied
-    ? resetCopyToClipboard
-    : () => {
-        return;
-      };
-  const snackbarMsg = error
-    ? error.message
-    : isCopied
-    ? "Copied to Clipboard"
-    : "";
+  const onNavBack = () => setFileUrl(null);
+
+  const handleFileUrl = async (file: File) => {
+    setIsUploading(true);
+    const { error: responseError, res } = await uploadFile(file);
+
+    if (responseError) {
+      setIsUploading(false);
+      enqueueSnackbar(responseError, getSnackbarOptionsVariant("error"));
+      return;
+    }
+
+    if (res && res.data) setFileUrl(res.data.fileUrl);
+
+    setIsUploading(false);
+  };
 
   return (
     <div className="flex items-center justify-center h-screen">
@@ -38,28 +36,13 @@ function App() {
         {isUploading ? (
           <Loader />
         ) : fileUrl ? (
-          <Uploaded
-            // eslint-disable-next-line @typescript-eslint/no-misused-promises
-            copyTextToClipboard={copyTextToClipboard}
-            fileUrl={fileUrl}
-          />
+          <Uploaded fileUrl={fileUrl} />
         ) : (
-          <Upload
-            handleChangeFile={handleChangeFile}
-            handleDroppedFile={handleDroppedFile}
-          />
+          <Upload handleFileUrl={handleFileUrl} />
         )}
       </Layout>
-      <Snackbar
-        open={isSnackBarOpened}
-        onClose={handleSnackbarClose}
-        anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
-        autoHideDuration={3000}
-      >
-        <Alert severity={error ? "error" : "success"}>{snackbarMsg}</Alert>
-      </Snackbar>
     </div>
   );
-}
+};
 
 export default App;

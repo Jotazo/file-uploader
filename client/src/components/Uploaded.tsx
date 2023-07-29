@@ -1,13 +1,29 @@
+import { useSnackbar } from "notistack";
 import checkIcon from "../assets/check.svg";
+
+import { getSnackbarOptionsVariant } from "../utils/getSnackbarOptions";
 
 import "./Uploaded.css";
 
 interface Props {
   fileUrl: string;
-  copyTextToClipboard: (text: string) => void;
 }
 
-const Uploaded: React.FC<Props> = ({ fileUrl, copyTextToClipboard }) => {
+const Uploaded: React.FC<Props> = ({ fileUrl }) => {
+  const { enqueueSnackbar } = useSnackbar();
+
+  const copyTextToClipboard = async (text: string) => {
+    enqueueSnackbar(
+      "Copied to Clipboard",
+      getSnackbarOptionsVariant("success")
+    );
+    if ("clipboard" in navigator) {
+      return await navigator.clipboard.writeText(text);
+    } else {
+      return document.execCommand("copy", true, text);
+    }
+  };
+
   return (
     <>
       <header className="flex flex-col items-center gap-4">

@@ -4,11 +4,11 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 interface Props {
   children: React.ReactNode;
-  onNavBack: () => void;
   fileUrl: string | null;
+  onNavBack: () => void;
 }
 
-const Layout: React.FC<Props> = ({ children, onNavBack, fileUrl }) => {
+const Layout: React.FC<Props> = ({ children, fileUrl, onNavBack }) => {
   return (
     <div className="card">
       {fileUrl && (
