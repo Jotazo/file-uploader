@@ -17,7 +17,7 @@ const App = () => {
 
   const handleFileUrl = async (file: File) => {
     setIsUploading(true);
-    const { error: responseError, res } = await uploadFile(file);
+    const { error: responseError, fileUrl } = await uploadFile(file);
 
     if (responseError) {
       setIsUploading(false);
@@ -25,8 +25,7 @@ const App = () => {
       return;
     }
 
-    if (res && res.data) setFileUrl(res.data.fileUrl);
-
+    setFileUrl(fileUrl);
     setIsUploading(false);
   };
 
