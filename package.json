@@ -11,7 +11,7 @@
     "server:build": "npm run build --workspace=server",
     "build": "npm run client:build && npm run server:build",
     "start": "npm run client:build && npm start --workspace=server",
-    "prepare": "husky install"
+    "pre": "husky install"
   },
   "workspaces": [
     "client",
