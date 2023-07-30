@@ -10,6 +10,14 @@ Los puntos a completar eran:
 
 He generado un `monorepo` donde almaceno ambos proyectos, Frontend y Backend
 
+## Demo
+[File Uploader Demo](https://file-uploader-client.onrender.com/)
+
+## Tecnologías usadas
+  - [Vite](https://vitejs.dev/)
+  - [Typescript](https://www.typescriptlang.org/)
+  - [Tailwind](https://tailwindcss.com/)
+  - [Node](https://nodejs.org/es)
 ## Screenshots
 ![Main](./screenshots/main.png)
 ![Error extension](./screenshots/error_ext.png)
@@ -17,9 +25,3 @@ He generado un `monorepo` donde almaceno ambos proyectos, Frontend y Backend
 ![Uploading](./screenshots/uploading.png)
 ![Uploaded success](./screenshots/upload_success.png)
 ![Copied to clipboard](./screenshots/copied_clipboard.png)
-
-## Tecnologías usadas
-  - [Vite](https://vitejs.dev/)
-  - [Typescript](https://www.typescriptlang.org/)
-  - [Tailwind](https://tailwindcss.com/)
-  - [Node](https://nodejs.org/es)

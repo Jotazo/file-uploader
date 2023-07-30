@@ -24,6 +24,8 @@
   border-radius: 8px;
   border: 1px solid var(--gray-5, #e0e0e0);
   background: #f6f8fb;
+  text-overflow: ellipsis;
+  padding: 0.5rem;
 }
 
 .btn {
