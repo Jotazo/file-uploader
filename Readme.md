@@ -11,30 +11,12 @@ Los puntos a completar eran:
 He generado un `monorepo` donde almaceno ambos proyectos, Frontend y Backend
 
 ## Screenshots
-<div class="screenshot-container">
-  <img src="./screenshots/main.png" class="screenshot"/>
-  <img src="./screenshots/error_ext.png" class="screenshot"/>
-  <img src="./screenshots/error_multi.png" class="screenshot"/>
-  <img src="./screenshots/uploading.png" class="screenshot"/>
-  <img src="./screenshots/upload_success.png" class="screenshot"/>
-  <img src="./screenshots/copied_clipboard.png" class="screenshot"/>
-</div>
-
-<style>
-  .screenshot-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    max-width: 1000px;
-  }
-
-  .screenshot{
-    height:100%;
-    width:100%;
-    object-fit:cover;
-    border-radius: .5rem;
-  }
-</style>
+![Main](./screenshots/main.png)
+![Error extension](./screenshots/error_ext.png)
+![Error multiple files](./screenshots/error_multi.png)
+![Uploading](./screenshots/uploading.png)
+![Uploaded success](./screenshots/upload_success.png)
+![Copied to clipboard](./screenshots/copied_clipboard.png)
 
 ## Tecnologías usadas
   - [Vite](https://vitejs.dev/)
