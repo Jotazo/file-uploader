@@ -28,3 +28,4 @@ server/src/uploads
 ### Shared
 node_modules
 build
+.vercel
