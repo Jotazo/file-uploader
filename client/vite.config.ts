@@ -11,19 +11,7 @@ const defaultConfig = {
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode, ssrBuild }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
-  const isDev = mode === "development";
 
-  const proxyTarget = isDev
-    ? process.env.VITE_API_URL_DEV
-    : process.env.VITE_API_URL_PROD;
-
-  return {
-    ...defaultConfig,
-    server: {
-      proxy: {
-        "/api": proxyTarget,
-      },
-    },
-  };
+  return defaultConfig;
 });
 
