@@ -8,9 +8,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint:fix": "eslint --fix src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "prettier": "npx prettier src/ --write",
+    "prettier:fix": "npx prettier ./src/ --write",
     "stylelint": "npx stylelint src/**/*.css",
-    "full:check": "npm run lint:fix && npm run prettier && npm run stylelint"
+    "full:check": "npm run lint:fix && npm run stylelint"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

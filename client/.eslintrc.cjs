@@ -24,6 +24,11 @@ module.exports = {
     ],
     "@typescript-eslint/no-non-null-assertion": "off",
   },
-  ignorePatterns: [".eslintrc.cjs", "postcss.config.js", "vite.config.ts"],
+  ignorePatterns: [
+    ".eslintrc.cjs",
+    "postcss.config.js",
+    "vite.config.ts",
+    "tailwind.config.js",
+  ],
 };
 

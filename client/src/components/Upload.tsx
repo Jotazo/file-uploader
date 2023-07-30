@@ -60,9 +60,7 @@ const Upload: React.FC<Props> = ({ handleFileUrl }) => {
         className="section opacity-80"
       >
         <img className="w-[35%]" src={inputImage} draggable={false} />
-        <p className="section-subtitle">
-          Drag & Drop your image here
-        </p>
+        <p className="section-subtitle">Drag & Drop your image here</p>
       </section>
       <footer className="flex flex-col items-center gap-6">
         <p className="footer-text">Or</p>

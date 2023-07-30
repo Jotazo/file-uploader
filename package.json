@@ -9,6 +9,7 @@
     "server:check": "npm run full:check --workspace=server",
     "server:dev": "npm run dev --workspace=server",
     "server:build": "npm run build --workspace=server",
+    "build": "npm run client:build && npm run server:build",
     "start": "npm run client:build && npm start --workspace=server",
     "prepare": "husky install"
   },
@@ -26,7 +27,7 @@
     "husky": "^8.0.0"
   },
   "engines": {
-    "node": "16.20.1"
+    "node": "^18.12.0"
   }
 }
 
