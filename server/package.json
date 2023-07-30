@@ -7,8 +7,6 @@
     "build": "tsc",
     "start": "npm run build && NODE_ENV=production node ./build/app.js",
     "dev": "NODE_ENV=development nodemon",
-    "render:build": "npm install && npm run build",
-    "render:start": "NODE_ENV=production node ./build/app.js",
     "lint:fix": "eslint --fix src",
     "prettier": "npx prettier src/ --write",
     "full:check": "npm run lint:fix && npm run prettier"

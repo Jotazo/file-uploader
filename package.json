@@ -9,6 +9,8 @@
     "server:check": "npm run full:check --workspace=server",
     "server:dev": "npm run dev --workspace=server",
     "server:build": "npm run build --workspace=server",
+    "render:build": "npm install && npm run server:build",
+    "render:start": "NODE_ENV=production node ./server/build/app.js",
     "build": "npm run client:build && npm run server:build",
     "start": "npm run client:build && npm start --workspace=server",
     "pre": "husky install"
