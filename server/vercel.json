@@ -2,6 +2,8 @@
   "version": 2,
   "builds": [
     {
+      "buildCommand": "npm run build",
+      "installCommand": "npm i",
       "src": "build/app.js",
       "use": "@vercel/node",
       "config": { "includeFiles": ["build/**"] }
@@ -12,6 +14,5 @@
       "src": "/(.*)",
       "dest": "build/app.js"
     }
-  ],
-  "buildCommand": "npm i && npm run build"
+  ]
 }
